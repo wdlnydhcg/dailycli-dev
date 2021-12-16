@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-09 16:42:18
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-16 15:06:48
+ * @LastEditTime: 2021-12-16 16:04:13
  * @Description: 
  */
 'use strict';
@@ -51,18 +51,19 @@ async function checkIsUpdate(){
   const curVersion = pkg.version;
   const npmName = pkg.name;
   const { getNpmInfo } = require("@dailycli-dev/get-npm-info");
-  let data = await getNpmInfo(npmName);
-  if(data){
-    let latestVersion = data["dist-tags"].latest;
-    if (latestVersion && semver.gt(latestVersion,curVersion)) {
-      console.info(
-        `注意：${chalk.bgRed.white.bold(
-          "当前版本号 "
-        )}${chalk.bgRed.white.bold(curVersion)} ${chalk.bgRed.white.bold(
-          "有新版本可用 "
-        )}${chalk.bgRed.white.bold(latestVersion)}`
-      );
-    }
+  let data = await getNpmInfo(npmName)
+
+  let latestVersion = data["dist-tags"].latest;
+  if (latestVersion && semver.gt(latestVersion,curVersion)) {
+    console.warn(
+      `注意：${chalk.bgRed.white.bold(
+        "当前版本号 "
+      )}${chalk.bgRed.white.bold(curVersion)} ${chalk.bgRed.white.bold(
+        "有新版本可用 "
+      )}${chalk.bgRed.white.bold(latestVersion)} \n
+      请手动更新 ${npmName} 包，更新命令为： npm install ${npmName}@lastest -g \n
+      `
+    );
   }
 };
 
