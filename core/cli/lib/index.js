@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-09 16:42:18
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-16 16:04:13
+ * @LastEditTime: 2021-12-16 16:16:04
  * @Description: 
  */
 'use strict';
@@ -105,7 +105,7 @@ function checkNodeVersion(){
 }
 //读取icon图标显示当前执行环境的信息
 function readIconAndCurInfo(){
-  let data = fs.readFileSync(path.join(__dirname, "../icon/icon.txt"),"utf8",);  
+  let data = fs.readFileSync(path.resolve(__dirname, "../icon/icon.txt"),"utf8",);  
   const lines = data.split(/\r?\n/);
   let InfoList = [
     `CLI Author: MrAlenZhong`,
