@@ -1,11 +1,11 @@
 {
   "name": "@dailycli-dev/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "dailycli-dev utils",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/utils.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
