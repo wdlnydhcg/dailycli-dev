@@ -23,8 +23,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@dailycli-dev/log": "file:../../utils/log",
     "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@dailycli-dev/log": "file:../../utils/log",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "dotenv": "^10.0.0",
