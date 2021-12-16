@@ -1,0 +1,22 @@
+                                    AAA           
+                                  AAA AAA         
+          CCCCCCC                AAA    AAA       
+           CCC  CCC                AAA    AAA     
+      CCCC  CCC  CC                 AAA    AAA    
+      CC CCCC    CC               AAA    A  AAA   
+       CC        CCC            AAA    AAAAA AA   
+        CCCCCCCC   CCC        AAA    AAA   AAAA   
+               CCC   CCC    AAA    AAA      AAA   
+                 CCC   CCC       AAA         AA   
+                   CCC   CCC   AAA                
+                     CCC   CCC                    
+                       CCC   CCC                  
+                   AAA   CCC   CCC                
+                 AAA   AA  CCC   CCC              
+               AAA   AAA     CCC   CCC CC         
+             AAA   AAA         CCC   CCCCCCCC     
+           AAA   AAA             CCC        CC    
+         AAA   AAA               CCC    CCCCCC    
+       AAA   AAA                 CCC  CCC  CCC    
+        AAAAAA                    CCC  CCC        
+          AA                        CCCCCCC       

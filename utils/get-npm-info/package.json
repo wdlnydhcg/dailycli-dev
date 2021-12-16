@@ -1,25 +1,27 @@
 {
-  "name": "@dailycli-dev/utils",
-  "version": "0.0.0",
-  "description": "dailycli-dev utils",
+  "name": "@dailycli-dev/get-npm-info",
+  "version": "0.0.1",
+  "description": "@dailycli-dev/get-npm-info",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/utils.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "chalk": "^4.1.2"
+    "axios": "^0.24.0",
+    "chalk": "^4.1.2",
+    "semver": "^7.3.5"
   }
 }

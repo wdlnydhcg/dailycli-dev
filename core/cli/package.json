@@ -1,7 +1,7 @@
 {
-  "name": "cli",
+  "name": "@dailycli-dev/cli",
   "version": "0.0.1",
-  "description": "core",
+  "description": "@dailycli-dev/cli",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "",
   "license": "ISC",
@@ -24,6 +24,12 @@
   },
   "dependencies": {
     "@dailycli-dev/log": "file:../../utils/log",
-    "yargs": "^17.3.0"
+    "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "dotenv": "^10.0.0",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.5",
+    "root-check": "^1.0.0"
   }
 }
