@@ -14,9 +14,9 @@
     "lib"
   ],
   "dependencies": {
-    "@dailycli-dev/format-path": "file:../../utils/format-path",
-    "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
-    "@dailycli-dev/utils": "file:../../utils/utils",
+    "@dailycli-dev/format-path": "^0.0.5",
+    "@dailycli-dev/get-npm-info": "^0.0.5",
+    "@dailycli-dev/utils": "^0.0.5",
     "fs-extra": "^10.0.0",
     "npminstall": "^5.3.1",
     "path-exists": "^4.0.0",
@@ -34,5 +34,6 @@
   },
   "bugs": {
     "url": "https://github.com/wdlnydhcg/dailycli-dev/issues"
-  }
+  },
+  "gitHead": "376ac915d6dde2ccf49af1c1c8ca47dad1475f68"
 }

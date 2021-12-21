@@ -13,6 +13,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
@@ -21,11 +24,12 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@dailycli-dev/log": "file:../../utils/log",
-    "@dailycli-dev/package": "file:../../models/package",
-    "@dailycli-dev/utils": "file:../../utils/utils"
+    "@dailycli-dev/log": "^0.0.5",
+    "@dailycli-dev/package": "^0.0.5",
+    "@dailycli-dev/utils": "^0.0.5"
   },
   "bugs": {
     "url": "https://github.com/wdlnydhcg/dailycli-dev/issues"
-  }
+  },
+  "gitHead": "376ac915d6dde2ccf49af1c1c8ca47dad1475f68"
 }

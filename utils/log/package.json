@@ -26,5 +26,6 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "npmlog": "^6.0.0"
-  }
+  },
+  "gitHead": "376ac915d6dde2ccf49af1c1c8ca47dad1475f68"
 }
