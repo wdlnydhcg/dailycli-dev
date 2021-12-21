@@ -13,9 +13,14 @@
       ],
       "args": [
         "init",
-        "prjName",
-        "--port",
+        // "--targetPath",
+        // "/Volumes/workspace/self-workspace/脚手架/dailycli-dev/commands/init",
+        "--debug",
+        "test-project",
+        "--force",
+
       ],
+
       "program": "${workspaceFolder}/core/cli/bin/index.js"
     }
   ]

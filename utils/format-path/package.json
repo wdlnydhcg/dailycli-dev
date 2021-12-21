@@ -1,13 +1,9 @@
 {
-  "name": "@dailycli-dev/get-npm-info",
+  "name": "@dailycli-dev/format-path",
   "version": "0.0.4",
-  "description": "@dailycli-dev/get-npm-info",
+  "description": "> TODO: description",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
-  },
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -20,12 +16,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "dependencies": {
-    "axios": "^0.24.0",
-    "chalk": "^4.1.2",
-    "semver": "^7.3.5"
+  "bugs": {
+    "url": "https://github.com/wdlnydhcg/dailycli-dev/issues"
   }
 }

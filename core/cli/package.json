@@ -3,7 +3,11 @@
   "version": "0.0.4",
   "description": "@dailycli-dev/cli",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
-  "homepage": "",
+  "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
+  },
   "license": "ISC",
   "bin": {
     "dailycli-dev": "bin/index.js"
@@ -14,7 +18,8 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "icon"
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -25,6 +30,8 @@
   "dependencies": {
     "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
     "@dailycli-dev/log": "file:../../utils/log",
+    "@dailycli-dev/init": "file:../../commands/init",
+    "@dailycli-dev/exec": "file:../exec",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "dotenv": "^10.0.0",

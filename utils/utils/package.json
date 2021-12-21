@@ -3,7 +3,11 @@
   "version": "0.0.4",
   "description": "dailycli-dev utils",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
-  "homepage": "",
+  "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
+  },
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
