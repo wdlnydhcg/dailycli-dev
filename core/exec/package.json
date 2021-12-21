@@ -1,6 +1,6 @@
 {
   "name": "@dailycli-dev/exec",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "dailycli-dev exec package",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
@@ -24,9 +24,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@dailycli-dev/log": "^0.0.5",
-    "@dailycli-dev/package": "^0.0.5",
-    "@dailycli-dev/utils": "^0.0.5"
+    "@dailycli-dev/log": "^0.0.6",
+    "@dailycli-dev/package": "^0.0.6",
+    "@dailycli-dev/utils": "^0.0.6"
   },
   "bugs": {
     "url": "https://github.com/wdlnydhcg/dailycli-dev/issues"
