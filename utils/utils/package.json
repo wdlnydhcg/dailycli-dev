@@ -1,10 +1,10 @@
 {
   "name": "@dailycli-dev/utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "dailycli-dev utils",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
   },

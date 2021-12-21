@@ -1,6 +1,6 @@
 {
   "name": "@dailycli-dev/cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "@dailycli-dev/cli",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
@@ -28,10 +28,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
-    "@dailycli-dev/log": "file:../../utils/log",
-    "@dailycli-dev/init": "file:../../commands/init",
     "@dailycli-dev/exec": "file:../exec",
+    "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@dailycli-dev/init": "file:../../commands/init",
+    "@dailycli-dev/log": "file:../../utils/log",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "dotenv": "^10.0.0",

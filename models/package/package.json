@@ -1,6 +1,6 @@
 {
   "name": "@dailycli-dev/package",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "dailycli-dev package class",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
@@ -15,8 +15,8 @@
   ],
   "dependencies": {
     "@dailycli-dev/format-path": "file:../../utils/format-path",
-    "@dailycli-dev/utils": "file:../../utils/utils",
     "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@dailycli-dev/utils": "file:../../utils/utils",
     "fs-extra": "^10.0.0",
     "npminstall": "^5.3.1",
     "path-exists": "^4.0.0",
