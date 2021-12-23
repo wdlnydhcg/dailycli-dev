@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-09 16:42:18
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-21 09:54:33
+ * @LastEditTime: 2021-12-22 15:44:49
  * @Description:
  */
 "use strict";
@@ -91,6 +91,7 @@ async function prepare () {
 async function checkIsUpdate () {
   const curVersion = pkg.version;
   const npmName = pkg.name;
+  
   const { getNpmInfo } = require("@dailycli-dev/get-npm-info");
   let data = await getNpmInfo(npmName);
 
@@ -107,7 +108,6 @@ async function checkIsUpdate () {
     );
   }
 }
-
 function checkArg () { }
 
 function checkEnv () {

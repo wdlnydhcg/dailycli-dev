@@ -55,9 +55,17 @@ async function exec () {
     }
     //获取指定的包的入口文件
     const rootFile =  await pkg.getRootFilePath()
-    console.log("rootFile : ", rootFile);
+    
+    if(rootFile){
+        try{
+            // 在当前进程中调用
+            require(rootFile).apply(null, arguments);
+        }catch(err){
+            log.error(err.message)
+        }
+    }
     //运行指定的包
-    require(rootFile).apply(null,arguments);
+    
     //1. 将targetPath认为是modulePath
     //2. 将modulePath认为是package(npm模块)
     //3. 将package.getRootFile(获取入口文件)
