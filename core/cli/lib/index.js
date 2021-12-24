@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-09 16:42:18
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-22 15:44:49
+ * @LastEditTime: 2021-12-24 11:10:04
  * @Description:
  */
 "use strict";
@@ -36,21 +36,19 @@ function registerCommand () {
     .option("-d, --debug", "debug mode")
     .option("-tp, --targetPath <targetPath>", "是否指定本地调试文件", "");
   program
-    .command("init [projectName]")
+    .command("init [projectName] [testParam]")
     .description("初始化项目")
     // .argument("[projectName]", "project name")
     .option("-f, --force", "是否强制初始化项目")
     .action(exec);
-  // 指定targetPath
+
+  //设置debug的日志登记
   program.on("option:debug", function () {
     if (this.opts().debug) {
       process.env.LOG_LEVEl = 'verbose';
-      console.log("debug mode");
     } else {
       process.env.LOG_LEVEl = "info";
-      console.log("not debug mode");
     }
-    console.log('set log level');
     log.level = process.env.LOG_LEVEl
   });
   // 加载指定包的路径targetPath

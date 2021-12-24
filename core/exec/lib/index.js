@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-17 10:24:23
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-21 11:12:53
+ * @LastEditTime: 2021-12-24 14:34:16
  * @Description:
  */
 "use strict";
@@ -10,7 +10,7 @@ const path = require("path");
 const Package = require("@dailycli-dev/package");
 const log = require("@dailycli-dev/log");
 const SETTINGS = {  //默认的包
-    init: '@dailycli-dev/init',     
+    init: '@dailycli-dev/init'
 };
 const CACHE_DIR = 'dependencies';       //下载的缓存路径
 //动态加载init包
@@ -55,11 +55,12 @@ async function exec () {
     }
     //获取指定的包的入口文件
     const rootFile =  await pkg.getRootFilePath()
-    
+    console.log("pkg", pkg);
     if(rootFile){
         try{
+            const args = Array.from(arguments);
             // 在当前进程中调用
-            require(rootFile).apply(null, arguments);
+            require(rootFile).call(null, args);   //这里用apply，方便参数的格式转换
         }catch(err){
             log.error(err.message)
         }

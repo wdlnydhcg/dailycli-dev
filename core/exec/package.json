@@ -24,9 +24,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@dailycli-dev/log": "^0.0.6",
-    "@dailycli-dev/package": "^0.0.6",
-    "@dailycli-dev/utils": "^0.0.6"
+    "@dailycli-dev/log": "file:../../utils/log",
+    "@dailycli-dev/package": "file:../../models/package",
+    "@dailycli-dev/utils": "file:../../utils/utils"
   },
   "bugs": {
     "url": "https://github.com/wdlnydhcg/dailycli-dev/issues"

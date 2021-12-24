@@ -5,19 +5,23 @@
   "version": "0.2.0",
   "configurations": [
     {
+      // "console": "integratedTerminal",
       "type": "pwa-node",
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": [
         "<node_internals>/**"
       ],
+      // "runtimeExecutable":,
       "args": [
         "init",
-        // "--targetPath",
-        // "/Volumes/workspace/self-workspace/脚手架/dailycli-dev/commands/init",
-        "--debug",
-        "test-project",
-        "--force",
+        // "pjName11",
+        // "pjName22",
+        "--targetPath",
+        "/Volumes/workspace/self-workspace/脚手架/dailycli-dev/commands/init",
+        // "--debug",
+        // "test-project",
+        // "--force",
 
       ],
 

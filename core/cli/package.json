@@ -28,10 +28,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@dailycli-dev/exec": "^0.0.6",
-    "@dailycli-dev/get-npm-info": "^0.0.6",
-    "@dailycli-dev/init": "^0.0.6",
-    "@dailycli-dev/log": "^0.0.6",
+    "@dailycli-dev/exec": "file:../exec",
+    "@dailycli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@dailycli-dev/init": "file:../../commands/init",
+    "@dailycli-dev/log": "file:../../utils/log",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "dotenv": "^10.0.0",
@@ -39,6 +39,5 @@
     "import-local": "^3.0.3",
     "minimist": "^1.2.5",
     "root-check": "^1.0.0"
-  },
-  "gitHead": "376ac915d6dde2ccf49af1c1c8ca47dad1475f68"
+  }
 }

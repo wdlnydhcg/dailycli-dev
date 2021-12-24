@@ -1,13 +1,9 @@
 {
-  "name": "@dailycli-dev/init",
-  "version": "0.0.6",
+  "name": "@dailycli-dev/command",
+  "version": "0.0.0",
   "description": "> TODO: description",
   "author": "wdlnydhcg <MrAlenZhong@163.com>",
   "homepage": "https://github.com/wdlnydhcg/dailycli-dev#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
-  },
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -18,16 +14,20 @@
     "lib"
   ],
   "dependencies": {
-    "@dailycli-dev/command": "file:../../models/command"
+    "@dailycli-dev/log": "file:../../utils/log",
+    "semver": "^7.3.5"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdlnydhcg/dailycli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/wdlnydhcg/dailycli-dev/issues"
-  },
-  "gitHead": "376ac915d6dde2ccf49af1c1c8ca47dad1475f68"
+  }
 }

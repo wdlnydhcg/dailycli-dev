@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-17 15:13:00
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-22 11:02:32
+ * @LastEditTime: 2021-12-23 17:04:46
  * @Description:
  */
 "use strict";
@@ -12,12 +12,12 @@ const npminstall = require("npminstall")
 const formatPath = require("@dailycli-dev/format-path");
 const pathExists = require("path-exists").sync;
 const fse = require("fs-extra");
-const pkgDir = require("pkg-dir");
+const pkgDir = require("pkg-dir").sync;
 const path = require("path");
 class Package {
     constructor(options) {
         console.log("I am package class");
-        if (!options ) {
+        if (!options) {
             throw new Error("Package类的构造函数必须传入参数");
         }
         if (!isObject(options)) {
@@ -56,7 +56,7 @@ class Package {
     }
 
     //判断当前package是否存在
-    async exists () { 
+    async exists () {
         if (this.storePath){
             await this.prepare();
             return pathExists(this.cacheFilePath);
@@ -102,38 +102,26 @@ class Package {
     }
 
     //获取入口文件路径
-    async getRootFilePath () {
-        //1. 先获取package.json所在的目录
-        const dir = await pkgDir(this.targetPath);
-        if (dir) {
-            //2. 读取package.json
-            const pkgFile = require(path.join(dir, "package.json"));
-            //3.寻找main字段，入口文件
-            if (pkgFile && pkgFile.main) {
-                //4. 路径兼容(mac，win)
-                return formatPath(path.resolve(dir, pkgFile.main));
+    getRootFilePath () {
+        function _getRootFile (targetPath){
+            //1. 先获取package.json所在的目录
+            const dir = pkgDir(targetPath);
+            if (dir) {
+                //2. 读取package.json
+                const pkgFile = require(path.join(dir, "package.json"));
+                //3.寻找main字段，入口文件
+                if (pkgFile && pkgFile.main) {
+                    //4. 路径兼容(mac，win)
+                    return formatPath(path.resolve(dir, pkgFile.main));
+                }
             }
+            return null
         }
-        return null
-        // function _getRootFile(targetPath){
-        //     //1. 先获取package.json所在的目录
-        //     const dir = pkgDir(this.targetPath);
-        //     if (dir) {
-        //         //2. 读取package.json
-        //         const pkgFile = require(path.join(dir, "package.json"));
-        //         //3.寻找main字段，入口文件
-        //         if (pkgFile && pkgFile.main) {
-        //             //4. 路径兼容(mac，win)
-        //             return formatPath(path.resolve(dir, pkgFile.main));
-        //         }
-        //     }
-        //     return null
-        // }
-        // if (this.storePath) {
-        //     return _getRootFile(this.cacheFilePath);
-        // } else {
-        //     return _getRootFile(this.targetPath);
-        // }
+        if (this.storePath) {
+            return _getRootFile(this.cacheFilePath)
+        }else{
+            return _getRootFile(this.targetPath)
+        }
     }
 }
 module.exports = Package;
