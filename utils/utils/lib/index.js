@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-09 15:51:38
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-24 14:49:48
+ * @LastEditTime: 2021-12-24 15:29:36
  * @Description: 
  */
 'use strict';
@@ -23,6 +23,7 @@ function sleep (timeout = 1000) {
   return new Promise(resolve => setTimeout(resolve, timeout));
 }
 
+//异步执行命令，返回子命令
 function exec (command, args, options) {
   const win32 = process.platform === 'win32';
 

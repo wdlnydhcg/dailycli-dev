@@ -2,13 +2,15 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-17 10:24:23
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-24 14:34:16
+ * @LastEditTime: 2021-12-24 17:02:31
  * @Description:
  */
 "use strict";
 const path = require("path");
 const Package = require("@dailycli-dev/package");
 const log = require("@dailycli-dev/log");
+var stringify = require('json-stringify-safe'); 
+const { exec: spawn } = require("@dailycli-dev/utils");
 const SETTINGS = {  //默认的包
     init: '@dailycli-dev/init'
 };
@@ -58,9 +60,31 @@ async function exec () {
     console.log("pkg", pkg);
     if(rootFile){
         try{
-            const args = Array.from(arguments);
+            // let args = arguments.filter(item => item)
+            let args = []
+            for (const key in arguments) {
+                if (Object.hasOwnProperty.call(arguments, key)) {
+                    const item = arguments[key];
+                    if (item && Object.keys(item).length !== 0){
+                        args.push(item)
+                    }
+                }
+            }
             // 在当前进程中调用
-            require(rootFile).call(null, args);   //这里用apply，方便参数的格式转换
+            // require(rootFile).call(null, args);   //这里用apply，方便参数的格式转换
+            const code = `require('${rootFile}').call(null, ${stringify(args)})`;
+            const child = spawn('node',['-e',code],{
+                cwd:process.cwd(),
+                stdio:'inherit'
+            })
+            child.on('error', e => {
+                log.error(e.message);
+                process.exit(1);
+            });
+            child.on('exit', e => {
+                log.verbose('命令执行成功:' + e);
+                process.exit(e);
+            });
         }catch(err){
             log.error(err.message)
         }

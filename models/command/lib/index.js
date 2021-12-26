@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-23 09:21:36
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-24 14:31:27
+ * @LastEditTime: 2021-12-24 15:49:55
  * @Description: 
  */
 'use strict';
@@ -23,13 +23,13 @@ class Command {
         if (argvs.length < 1) {
             throw new Error('参数列表为空！');
         }
-        this._argv = cmd.args();
+        this._argv = argvs;
         let runner = new Promise((resolve, reject) => {
             let chain = Promise.resolve();
             chain = chain.then(() => this.checkNodeVersion());
             chain = chain.then(() => this.initArgs());
-            chain = chain.then(() => this.init());
-            chain = chain.then(() => this.exec());
+            chain = chain.then(() => this.init());  //init是先调用子类实现的方法，如果子类没有，则执行父类的
+            chain = chain.then(() => this.exec()); //init是先调用子类实现的方法，如果子类没有，则执行父类的
             chain.catch(err => {
                 log.error(err.message);
             });
