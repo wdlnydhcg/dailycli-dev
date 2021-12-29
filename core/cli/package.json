@@ -38,6 +38,7 @@
     "fs-extra": "^10.0.0",
     "import-local": "^3.0.3",
     "minimist": "^1.2.5",
-    "root-check": "^1.0.0"
+    "root-check": "^1.0.0",
+    "semver": "^7.3.5"
   }
 }

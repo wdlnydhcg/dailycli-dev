@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2021-12-09 15:51:38
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-12-24 15:29:36
+ * @LastEditTime: 2021-12-28 16:26:51
  * @Description: 
  */
 'use strict';
@@ -45,7 +45,15 @@ function execAsync (command, args, options) {
   });
 }
 
+function loadingStart(loadingString = '执行中,请稍等'){
+  const ora = require('ora');
+  const loading = ora(loadingString).start();
+  loading.spinner = "soccerHeader"
+  return loading;
+}
+
 module.exports = {
+  loadingStart,
   isObject,
   spinnerStart,
   sleep,

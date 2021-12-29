@@ -18,7 +18,11 @@
     "lib"
   ],
   "dependencies": {
-    "@dailycli-dev/command": "file:../../models/command"
+    "@dailycli-dev/command": "file:../../models/command",
+    "@dailycli-dev/log": "file:../../utils/log",
+    "@dailycli-dev/utils": "file:../../utils/utils",
+    "inquirer": "^8.2.0",
+    "semver": "^7.3.5"
   },
   "publishConfig": {
     "access": "public"
